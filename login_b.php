@@ -9,7 +9,7 @@ $sql ="SELECT * FROM account WHERE userID = '$userID' AND PASSWORD = '$password'
 $result = mysqli_query($link, $sql);
 if($row = mysqli_fetch_assoc($result))
 {
-    if($row['level'] == "admin"){
+    if($row['LEVEL'] == "admin"){
         ?>
 <script language="javascript">
     alert('此為管理員系統，使用者不得登入');
@@ -18,9 +18,9 @@ if($row = mysqli_fetch_assoc($result))
 
 <?php
     }else{
-        $_SESSION['userID'] = $row['userID'];
-        $_SESSION['name'] = $row['name'];
-        $_SESSION['level'] = $row['level'];
+        $_SESSION['userID'] = $row['USERID'];
+        $_SESSION['name'] = $row['USERNAME'];
+        $_SESSION['level'] = $row['LEVEL'];
         header("location: home.php");
     }
 }else{
