@@ -198,7 +198,7 @@ $row = mysqli_fetch_assoc($result);
                             <?php
                             if($row['LEVEL'] == "user"){
                             ?>
-                            <a href="delete.php?userID=<?php echo $row['USERID']?>" style="float: center; width: 100px;height: 20px; border-radius: 4px;background-color: #70c745; color: white; border-color:#DDDDDD ;">&nbspuser</a>
+                            <a href="delete.php?userID=<?php echo $row['USERID']?>" style="float: center; width: 100px;height: 20px; border-radius: 4px;background-color: #70c745; color: white; border-color:#DDDDDD ;">&nbspdelete</a>
                             <?php
                             }
                             ?>
