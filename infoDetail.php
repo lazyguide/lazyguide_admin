@@ -121,7 +121,7 @@ $link = @mysqli_connect('localhost', 'root', '12345678', 'lazyguide'); ?>
                 //這裡是detail，所以會看到標題和內容
                 $infoID= $_GET["infoID"];
 
-                $sql = "select * from information where infoID = '$infoID'";
+                $sql = "select * from information where INFOID = '$infoID'";
                 $result = mysqli_query($link, $sql);
 
                 ?>
