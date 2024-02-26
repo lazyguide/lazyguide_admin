@@ -193,9 +193,15 @@ $row = mysqli_fetch_assoc($result);
                           <?php echo $row["LEVEL"]; ?><i class="mdi mdi-arrow-down"></i>
                         </td>
                         <td>
-                          <a href="level_b.php?userID=<?php echo $row['USERID']?>&level=admin" style="float: center; width: 1000px;height: 20px; border-radius: 4px;background-color: #70c745; color: white; border-color:#DDDDDD ;">&nbspadmin</a>
-
-                              <a href="level_b.php?userID=<?php echo $row['USERID']?>&level=user" style="float: center; width: 100px;height: 20px; border-radius: 4px;background-color: #70c745; color: white; border-color:#DDDDDD ;">&nbspuser</a>
+                            <a href="level_b.php?userID=<?php echo $row['USERID']?>&level=admin" style="float: center; width: 1000px;height: 20px; border-radius: 4px;background-color: #70c745; color: white; border-color:#DDDDDD ;">&nbspadmin</a>
+                            <a href="level_b.php?userID=<?php echo $row['USERID']?>&level=user" style="float: center; width: 100px;height: 20px; border-radius: 4px;background-color: #70c745; color: white; border-color:#DDDDDD ;">&nbspuser</a>
+                            <?php
+                            if($row['LEVEL'] == "user"){
+                            ?>
+                            <a href="delete.php?userID=<?php echo $row['USERID']?>" style="float: center; width: 100px;height: 20px; border-radius: 4px;background-color: #70c745; color: white; border-color:#DDDDDD ;">&nbspuser</a>
+                            <?php
+                            }
+                            ?>
 
                         </td>
                       </tr>
