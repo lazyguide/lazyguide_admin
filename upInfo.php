@@ -121,8 +121,8 @@
                     <div class="section-heading">
                         <form method="get" action="upInfo_b.php" style="font-size: 20px;"><br><br>
                             訊息類別：<br>
-                            校園訊息<input type="radio" name="type" required style="width:450px;">
-                            系統訊息<input type="radio" name="type" required style="width:450px;">
+                            <input type="radio" name="type" required style="width:450px;">校園訊息
+                            <input type="radio" name="type" required style="width:450px;">系統訊息
                             標題：<br>
                             <input type="text" name="title" required style="width:450px;"><br><br>
                             內文：<br>
