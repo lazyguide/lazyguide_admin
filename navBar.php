@@ -5,10 +5,11 @@ if($_SESSION['level'] == 'admin'){
 <div class="classynav">
                                 <ul>
                                     <li><a href="home.php">首頁</a></li>
-                                    <li><a href="#">最新訊息發布</a>
+                                    <li><a href="upInfo.php">最新訊息發布</a></li>
+                                    <li><a href="#">查看訊息</a>
                                         <ul class="dropdown">
-                                            <li><a href="count1.php">校園訊息發布</a></li>
-                                            <li><a href="history.php">系統訊息發布</a></li>
+                                            <li><a href="schoolInfo.php">校園訊息</a></li>
+                                            <li><a href="systemInfo.php">系統訊息</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="level.php">權限管理</a></li>
