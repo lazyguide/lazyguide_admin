@@ -3,7 +3,7 @@
 <?php
 
 session_start();
-$link = @mysqli_connect('localhost', 'root', '12345678', 'sa');
+$link = @mysqli_connect('localhost', 'root', '12345678', 'lazyguide');
 
 $sql = "select * from account;";
 $result = mysqli_query($link, $sql);
@@ -136,7 +136,7 @@ $row = mysqli_fetch_assoc($result);
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="#"><i class="fa fa-home"></i> 首頁</a></li>
-              <li class="breadcrumb-item active" aria-current="page">權限與資料管理</li>
+              <li class="breadcrumb-item active" aria-current="page">權限管理</li>
             </ol>
           </nav>
         </div>
@@ -180,22 +180,22 @@ $row = mysqli_fetch_assoc($result);
                     <tbody>
                       <tr>
                         <td>
-                          <?php echo $row["name"]; ?>
+                          <?php echo $row["USERNAME"]; ?>
                         </td>
                         <td>
-                          <?php echo $row["phone"]; ?>
+                          <?php echo $row["PHONE"]; ?>
                         </td>
                         <td>
-                          <?php echo $row["userID"]; ?>
+                          <?php echo $row["USERID"]; ?>
                         </td>
 
                         <td class="text-success">
-                          <?php echo $row["level"]; ?><i class="mdi mdi-arrow-down"></i>
+                          <?php echo $row["LEVEL"]; ?><i class="mdi mdi-arrow-down"></i>
                         </td>
                         <td>
-                          <a href="level_b.php?userID=<?php echo $row['userID']?>&level=admin" style="float: center; width: 1000px;height: 20px; border-radius: 4px;background-color: #70c745; color: white; border-color:#DDDDDD ;">&nbspadmin</a>
+                          <a href="level_b.php?userID=<?php echo $row['USERID']?>&level=admin" style="float: center; width: 1000px;height: 20px; border-radius: 4px;background-color: #70c745; color: white; border-color:#DDDDDD ;">&nbspadmin</a>
 
-                              <a href="level_b.php?userID=<?php echo $row['userID']?>&level=user" style="float: center; width: 100px;height: 20px; border-radius: 4px;background-color: #70c745; color: white; border-color:#DDDDDD ;">&nbspuser</a>
+                              <a href="level_b.php?userID=<?php echo $row['USERID']?>&level=user" style="float: center; width: 100px;height: 20px; border-radius: 4px;background-color: #70c745; color: white; border-color:#DDDDDD ;">&nbspuser</a>
 
                         </td>
                       </tr>
