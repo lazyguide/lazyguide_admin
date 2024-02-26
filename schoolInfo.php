@@ -35,7 +35,7 @@
 session_start();
 $link = @mysqli_connect('localhost', 'root', '12345678', 'lazyguide');
 
-$sql = "select * from information";
+$sql = "select * from info WHERE INFOTYPE = 'school'";
 $result = mysqli_query($link, $sql);
 ?>
 <!-- Preloader -->
@@ -158,13 +158,13 @@ $result = mysqli_query($link, $sql);
                 <tbody>
                 <?php while ($row = mysqli_fetch_assoc($result)) { ?>
                     <tr>
-                        <th scope="row"><?php echo $row["infoID"]; ?></th>
-                        <td><u><a href="infoDetail.php?infoID=<?php echo $row['infoID']?>">
-                                    <?php echo $row["title"]; ?>
+                        <th scope="row"><?php echo $row["INFOID"]; ?></th>
+                        <td><u><a href="infoDetail.php?infoID=<?php echo $row['INFOID']?>">
+                                    <?php echo $row["INFOTITLE"]; ?>
                                 </a>
                             </u>
                         </td>
-                        <td><?php echo $row["time"]; ?></td>
+                        <td><?php echo $row["TIME"]; ?></td>
                     </tr>
 
                 <?php } ?>
