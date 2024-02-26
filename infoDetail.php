@@ -1,6 +1,9 @@
 <?php
 session_start();
-$link = @mysqli_connect('localhost', 'root', '12345678', 'lazyguide'); ?>
+$link = @mysqli_connect('localhost', 'root', '12345678', 'lazyguide');
+$type = $_GET['type'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -145,11 +148,11 @@ $link = @mysqli_connect('localhost', 'root', '12345678', 'lazyguide'); ?>
                                     </p>
 
                                     <div style="text-align: center;">
-                                        <a href="infoUpdate.php?infoID=<?php echo $infoID; ?>"
+                                        <a href="infoUpdate.php?infoID=<?php echo $infoID; ?>&type=<?php echo $type; ?>"
                                             style="float: right; width: 70px;height: 20px; border-radius: 4px;background-color: #70c745; color: white; border-color:#DDDDDD ;">修改</a>
 
 
-                                        <a href="infoDelete.php?infoID=<?php echo $infoID; ?>"
+                                        <a href="infoDelete.php?infoID=<?php echo $infoID; ?>&type=<?php echo $type; ?>"
                                             style="float: left; width: 70px;height: 20px; border-radius: 4px;background-color: #70c745; color: white; border-color:#DDDDDD ;">刪除</a>
 
 

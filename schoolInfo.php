@@ -159,7 +159,7 @@ $result = mysqli_query($link, $sql);
                 <?php while ($row = mysqli_fetch_assoc($result)) { ?>
                     <tr>
                         <th scope="row"><?php echo $row["INFOID"]; ?></th>
-                        <td><u><a href="infoDetail.php?infoID=<?php echo $row['INFOID']?>">
+                        <td><u><a href="infoDetail.php?infoID=<?php echo $row['INFOID']?>&type=school">
                                     <?php echo $row["INFOTITLE"]; ?>
                                 </a>
                             </u>
