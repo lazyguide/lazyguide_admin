@@ -9,7 +9,7 @@ $sql ="SELECT * FROM account WHERE userID = '$userID' AND PASSWORD = '$password'
 $result = mysqli_query($link, $sql);
 if($row = mysqli_fetch_assoc($result))
 {
-    if($row['LEVEL'] == "admin"){
+    if($row['LEVEL'] != "admin"){
         ?>
 <script language="javascript">
     alert('此為管理員系統，使用者不得登入');

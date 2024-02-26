@@ -126,8 +126,6 @@
                          <div class="text-center">
                          <input type="submit" class="btn btn-green btn-block enter-btn" value="登入"><br>
                          </div>
-
-                         <p class="sign-up">還沒有帳戶嗎?<a href="sign.php"> 點我註冊</a></p>
                          </form>
                  </div>
              </div>
