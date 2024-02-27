@@ -126,7 +126,8 @@ $type = $_GET['type'];
             if($type == "indoor"){
                 $sql = "select * from indoor_activity where IDR_ACTID = '$actID'";
             }else{
-                $sql = "select * from outdoor_activity where ODR_ACTID = '$actID'";
+                $sql = "select * from outdoor_activity odr OUTER JOIN place p on  
+                                            odr.PLACEID = p.PLACEID where ODR_ACTID = '$actID'";
             }
             $result = mysqli_query($link, $sql);
 
@@ -144,7 +145,7 @@ $type = $_GET['type'];
                                     <?php
                                     if($type == "indoor"){
                                         echo $row['IDR_ACTNAME'];?><span>
-                                        <?php echo $row['IDR_STARTDATE']." ~ ".$row['IDR_ENDDATE'] ?>
+                                        <?php echo $row['IDR_ACT_STARTDATE']." ~ ".$row['IDR_ACT_ENDDATE'] ?>
                                             </span>
                                     <?php
                                         }else{
@@ -156,7 +157,9 @@ $type = $_GET['type'];
 
                             </div>
                             <p align="left">
+                                活動地點：
                                 <?php if($type == "indoor"){
+                                    echo $row['BUILDINGID'].$row['ROOMID'];
                                     echo $row['IDR_ACT_DESCRIPTION'];
                                 }else{
                                     echo $row['ODR_ACT_DESCRIPTION'];
