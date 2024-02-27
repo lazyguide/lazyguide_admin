@@ -165,12 +165,15 @@ $type = $_GET['type'];
                             </p>
 
                             <div style="text-align: center;">
-                                <a href="infoUpdate.php?infoID=<?php echo $infoID; ?>&type=<?php echo $type; ?>"
-                                   style="float: right; width: 70px;height: 20px; border-radius: 4px;background-color: #70c745; color: white; border-color:#DDDDDD ;">修改</a>
+                                <?php
+                                if($row['ISVARIFIED'] == 0){?>
+                                    <a href="actVarify.php?actID=<?php echo $actID; ?>&type=<?php echo $type; ?>"
+                                        style="float: right; width: 70px;height: 20px; border-radius: 4px;background-color: #70c745; color: white; border-color:#DDDDDD ;">審核通過</a>
+<?php }
+                                ?>
 
-
-                                <a href="infoDelete.php?infoID=<?php echo $infoID; ?>&type=<?php echo $type; ?>"
-                                   style="float: left; width: 70px;height: 20px; border-radius: 4px;background-color: #70c745; color: white; border-color:#DDDDDD ;">刪除</a>
+                                <a href="actDelete.php?actID=<?php echo $actID; ?>&type=<?php echo $type; ?>"
+                                   style="float: left; width: 70px;height: 20px; border-radius: 4px;background-color: #70c745; color: white; border-color:#DDDDDD ;">刪除活動</a>
 
 
                             </div>
