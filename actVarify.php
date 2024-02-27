@@ -16,13 +16,15 @@ if($type == "indoor"){
 }
 ?>
 <script language="javascript">
-    if(confirm("確定審核此活動？ 活動名稱：<?php echo $name?>")){
+    if(confirm("確定審核此活動？ 活動名稱：<?php echo $name?>")){</script>
         <?php
             if ($type == "indoor"){
                 $sql2 = "UPDATE indoor_activity SET ISVARIFIED = 1 WHERE IDR_ACTID = $actID";
                 $result = mysqli_query($link, $sql2);
                 if($result){
-                    header("Location: indoor.php");
+                    ?>
+        <script>location.href="indoor.php"</script>
+<?php
                 }else{
                     echo "error";
                 }
@@ -30,14 +32,15 @@ if($type == "indoor"){
             }else{
                 $sql2 = "UPDATE outdoor_activity SET ISVARIFIED = 1 WHERE ODR_ACTID = $actID";
                 $result = mysqli_query($link, $sql2);
-                if($result){
-                    header("Location: outdoor.php");
+                if($result){?>
+                <script>location.href = "outdoor.php"</script>
+<?php
                 }else{
                     echo "error";
                 }
 
             }?>
-
+<script>
     }else{
         history.back();
     }
