@@ -1,6 +1,9 @@
 <?php
 session_start();
-$link = @mysqli_connect('localhost', 'root', '12345678', 'sa'); ?>
+$link = @mysqli_connect('localhost', 'root', '12345678', 'lazyguide');
+$type = $_GET['type'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -121,7 +124,7 @@ $link = @mysqli_connect('localhost', 'root', '12345678', 'sa'); ?>
                 //這裡是detail，所以會看到標題和內容
                 $infoID= $_GET["infoID"];
 
-                $sql = "select * from information where infoID = '$infoID'";
+                $sql = "select * from info where INFOID = '$infoID'";
                 $result = mysqli_query($link, $sql);
 
                 ?>
@@ -134,30 +137,26 @@ $link = @mysqli_connect('localhost', 'root', '12345678', 'sa'); ?>
                                     <?php $row = mysqli_fetch_assoc($result); ?>
 
                                         <h1>
-                                            <?php echo $row['title'] ?><span>
-                                                <?php echo $row['time'] ?>
+                                            <?php echo $row['INFOTITLE'] ?><span>
+                                                <?php echo $row['TIME'] ?>
                                             </span>
                                         </h1>
 
                                     </div>
                                     <p align="left">
-                                        <?php echo $row['content'] ?>
+                                        <?php echo $row['INFOCONTENT'] ?>
                                     </p>
 
-
-
-                                <?php if($_SESSION['level'] == 'admin'){?>
                                     <div style="text-align: center;">
-                                        <a href="infoUpdate.php?infoID=<?php echo $infoID; ?>"
+                                        <a href="infoUpdate.php?infoID=<?php echo $infoID; ?>&type=<?php echo $type; ?>"
                                             style="float: right; width: 70px;height: 20px; border-radius: 4px;background-color: #70c745; color: white; border-color:#DDDDDD ;">修改</a>
 
 
-                                        <a href="infoDelete.php?infoID=<?php echo $infoID; ?>"
+                                        <a href="infoDelete.php?infoID=<?php echo $infoID; ?>&type=<?php echo $type; ?>"
                                             style="float: left; width: 70px;height: 20px; border-radius: 4px;background-color: #70c745; color: white; border-color:#DDDDDD ;">刪除</a>
 
 
                                     </div>
-                                <?php } ?>
 
 
                             </div>

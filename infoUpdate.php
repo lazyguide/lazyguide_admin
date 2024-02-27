@@ -1,5 +1,7 @@
 <?php session_start();
-$link = @mysqli_connect('localhost', 'root', '12345678', 'sa'); ?>
+$link = @mysqli_connect('localhost', 'root', '12345678', 'lazyguide');
+$type = $_GET['type'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -114,12 +116,12 @@ $link = @mysqli_connect('localhost', 'root', '12345678', 'sa'); ?>
 
                 $infoID = $_GET["infoID"];
 
-                $sql = "select * from information where infoID = $infoID";
+                $sql = "select * from info where INFOID = $infoID";
                 $result = mysqli_query($link, $sql);
 
                 if ($row = mysqli_fetch_assoc($result)) {
-                    $title = $row['title'];
-                    $content = $row['content'];
+                    $title = $row['INFOTITLE'];
+                    $content = $row['INFOCONTENT'];
 
                 }
                 ?>
@@ -131,6 +133,7 @@ $link = @mysqli_connect('localhost', 'root', '12345678', 'sa'); ?>
 
                         <form method="GET" action="infoUpdate_b.php" style="font-size: 20px;"><br><br>
                             <input type="hidden" name="infoID" value="<?php echo $infoID; ?>">
+                            <input type="hidden" name="type" value="<?php echo $type; ?>">
                             標題：<br>
                             <input name='title' type="text" value="<?php echo $title; ?>"
                                 style="width:450px;"><br><br>
