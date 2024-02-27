@@ -16,7 +16,7 @@ if($type == "indoor"){
 }
 ?>
 <script language="javascript">
-    if(confirm("確定審核此活動？ 活動名稱：<?php echo $name?>")){</script>
+    if(confirm("確定審核此活動？ 活動名稱：<?php echo $name?>")){
         <?php
             if ($type == "indoor"){
                 $sql2 = "UPDATE indoor_activity SET ISVARIFIED = 1 WHERE IDR_ACTID = $actID";
@@ -40,7 +40,6 @@ if($type == "indoor"){
                 }
 
             }?>
-<script>
     }else{
         history.back();
     }
