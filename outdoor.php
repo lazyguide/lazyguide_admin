@@ -154,7 +154,7 @@ $result = mysqli_query($link, $sql);
                     <th scope="col">#</th>
                     <th scope="col">活動名稱</th>
                     <th scope="col">狀態</th>
-                    <th scope="col">活動期間</th>>
+                    <th scope="col">活動期間</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -176,7 +176,7 @@ $result = mysqli_query($link, $sql);
                         }elseif ($row["ISVARIFIED"] == 0 and $current >= $row["ODR_ACT_STARTDATE"]){
                             echo '<td>逾期未審核</td>';
                         }else{
-                            echo '<td>活動已進行</td>';
+                            echo '<td>活動已完成</td>';
                         }
                         ?>
                         <td><?php echo $row["ODR_ACT_STARTDATE"]." ~ ". $row["ODR_ACT_ENDDATE"]; ?></td>

@@ -176,7 +176,7 @@ $result = mysqli_query($link, $sql);
                         }elseif ($row["ISVARIFIED"] == 0 and $current >= $row["IDR_ACT_STARTDATE"]){
                             echo '<td>逾期未審核</td>';
                         }else{
-                            echo '<td>活動已進行</td>';
+                            echo '<td>活動已完成</td>';
                         }
                         ?>
                         <td><?php echo $row["IDR_ACT_STARTDATE"]." ~ ". $row["IDR_ACT_ENDDATE"]; ?></td>
