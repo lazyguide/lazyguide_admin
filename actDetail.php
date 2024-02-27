@@ -2,6 +2,8 @@
 session_start();
 $link = @mysqli_connect('localhost', 'root', '12345678', 'lazyguide');
 $type = $_GET['type'];
+$date = new DateTime('now', new DateTimeZone('Asia/Taipei'));
+$current = $date->format('Y-m-d H:i:s');
 ?>
 
 <!DOCTYPE html>
@@ -160,16 +162,18 @@ $type = $_GET['type'];
                                 <?php if($type == "indoor"){
                                     echo $row['BUILDINGID'].$row['ROOMID'].'<br><br>';
                                     echo $row['IDR_ACT_DESCRIPTION'];
+                                    $start = $row['IDR_ACT_STARTDATE'];
                                 }else{
                                     echo $row['PLACENAME'].'<br><br>';
                                     echo $row['ODR_ACT_DESCRIPTION'];
+                                    $start = $row['ODR_ACT_STARTDATE'];
                                 }
                                 ?>
                             </p>
 
                             <div style="text-align: center;">
                                 <?php
-                                if($row['ISVARIFIED'] == 0){?>
+                                if($row['ISVARIFIED'] == 0 and $start > $current ){?>
                                     <a href="actVarify.php?actID=<?php echo $actID; ?>&type=<?php echo $type; ?>"
                                         style="float: right; width: 70px;height: 20px; border-radius: 4px;background-color: #70c745; color: white; border-color:#DDDDDD ;">審核通過</a>
 <?php }
