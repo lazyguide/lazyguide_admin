@@ -149,7 +149,7 @@ $type = $_GET['type'];
                                     <?php
                                         }else{
                                             echo $row['ODR_ACTNAME'];?><span>
-                                        <?php echo $row['ODR_STARTDATE']." ~ ".$row['ODR_ENDDATE'] ?>
+                                        <?php echo $row['ODR_ACT_STARTDATE']." ~ ".$row['ODR_ACT_ENDDATE'] ?>
                                             </span>
                                         <?php }?>
                                 </h1>
@@ -161,7 +161,7 @@ $type = $_GET['type'];
                                     echo $row['BUILDINGID'].$row['ROOMID'].'<br><br>';
                                     echo $row['IDR_ACT_DESCRIPTION'];
                                 }else{
-                                    echo $row['p.PLACENAME'];
+                                    echo $row['PLACENAME'];
                                     echo $row['ODR_ACT_DESCRIPTION'];
                                 }
                                 ?>
