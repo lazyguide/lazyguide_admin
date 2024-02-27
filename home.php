@@ -102,7 +102,7 @@
                                     <br>
                                     <?php
                                         $link = mysqli_connect('localhost', 'root', '12345678', 'lazyguide');
-                                        $sql = "SELECT * FROM info WHERE INFOID = (SELECT MAX(INFO) FROM info WHERE INFOTYPE = 'school')";
+                                        $sql = "SELECT * FROM info WHERE INFOID = (SELECT MAX(INFOID) FROM info WHERE INFOTYPE = 'school')";
                                         $result = mysqli_query($link, $sql);
                                         $row = mysqli_fetch_assoc($result);
                                     ?>
@@ -121,7 +121,7 @@
                                     <br>
                                     <?php
                                     $link = mysqli_connect('localhost', 'root', '12345678', 'lazyguide');
-                                    $sql = "SELECT * FROM info WHERE INFOID = (SELECT MAX(INFO) FROM info WHERE INFOTYPE = 'system')";
+                                    $sql = "SELECT * FROM info WHERE INFOID = (SELECT MAX(INFOID) FROM info WHERE INFOTYPE = 'system')";
                                     $result = mysqli_query($link, $sql);
                                     $row = mysqli_fetch_assoc($result);
                                     ?>
