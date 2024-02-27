@@ -22,8 +22,7 @@ if($type == "indoor"){
                 $sql2 = "UPDATE indoor_activity SET ISVARIFIED = 1 WHERE IDR_ACTID = $actID";
                 $result = mysqli_query($link, $sql2);
                 if($result){
-                    ?>
-                    location.href("indoor.php");<?php
+                    header("Location: indoor.php");
                 }else{
                     echo "error";
                 }
@@ -32,8 +31,7 @@ if($type == "indoor"){
                 $sql2 = "UPDATE outdoor_activity SET ISVARIFIED = 1 WHERE ODR_ACTID = $actID";
                 $result = mysqli_query($link, $sql2);
                 if($result){
-                    ?>
-                    location.href("outdoor.php");<?php
+                    header("Location: outdoor.php");
                 }else{
                     echo "error";
                 }
