@@ -161,7 +161,7 @@ $type = $_GET['type'];
                                     echo $row['BUILDINGID'].$row['ROOMID'].'<br><br>';
                                     echo $row['IDR_ACT_DESCRIPTION'];
                                 }else{
-                                    echo $row['PLACENAME'];
+                                    echo $row['PLACENAME'].'<br><br>';
                                     echo $row['ODR_ACT_DESCRIPTION'];
                                 }
                                 ?>
