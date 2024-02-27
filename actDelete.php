@@ -20,7 +20,7 @@ if($type == "indoor"){
         if($result){
         ?><script>
             alert("已刪除活動：<?php echo $name;?>");
-            location.href("indoor.php");</script><?php
+            location.href="indoor.php";</script><?php
         }else{
             echo "error";
         }
@@ -30,7 +30,7 @@ if($type == "indoor"){
         if($result){
         ?><script>
             alert("已刪除活動: <?php echo $name;?>");
-            location.href("outdoor.php");
+            location.href="outdoor.php";
         </script><?php
         }else{
             echo "error";
