@@ -159,9 +159,10 @@ $type = $_GET['type'];
                             <p align="left">
                                 活動地點：
                                 <?php if($type == "indoor"){
-                                    echo $row['BUILDINGID'].$row['ROOMID'];
+                                    echo $row['BUILDINGID'].$row['ROOMID'].'<br><br>';
                                     echo $row['IDR_ACT_DESCRIPTION'];
                                 }else{
+                                    echo $row['p.PLACENAME'];
                                     echo $row['ODR_ACT_DESCRIPTION'];
                                 }
                                 ?>
