@@ -13,7 +13,12 @@ if($_SESSION['level'] == 'admin'){
                                         </ul>
                                     </li>
                                     <li><a href="level.php">權限管理</a></li>
-                                    <li><a href="level.php">活動審核</a></li>
+                                    <li><a href="#">活動審核</a>
+                                        <ul class="dropdown">
+                                            <li><a href="indoor.php">室內活動審核</a></li>
+                                            <li><a href="putdoor.php">室外活動審核</a></li>
+                                        </ul>
+                                    </li>
                                     <li><a href="logout.php"><font style="color:#70c745;">Hi&nbsp&nbsp <?php echo $_SESSION['name']."  登出"?></font></a></li>
                                 </ul>
 </div>
