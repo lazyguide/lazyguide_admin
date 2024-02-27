@@ -98,16 +98,16 @@
                             <div class="col-12">
                                 <!-- Post Content -->
                                 <div id="nav">
-                                    <h2 style="color:white;" >最新公告</h2>
+                                    <h2 style="color:white;" >最新校園公告</h2>
                                     <br>
                                     <?php
-                                        $link = mysqli_connect('localhost', 'root', '12345678', 'sa');
-                                        $sql = "SELECT * FROM shopNews WHERE NewsID = (SELECT MAX(NewsID) FROM shopNews)";
+                                        $link = mysqli_connect('localhost', 'root', '12345678', 'lazyguide');
+                                        $sql = "SELECT * FROM info WHERE INFOID = (SELECT MAX(INFO) FROM info WHERE INFOTYPE = 'school')";
                                         $result = mysqli_query($link, $sql);
                                         $row = mysqli_fetch_assoc($result);
                                     ?>
-                                    <a href="detail.php?newsID=<?php echo $row['NewsID']?>"><p style="color:white;font-size:18px;" ><?php echo $row['title'];?></p></a>
-                                    <a href="shopNews.php"><p style="color:white;font-size:18px;" >查看更多...</p></a>
+                                    <a href="infoDetail.php?infoID=<?php echo $row['INFOID']?>&type=school"><p style="color:white;font-size:18px;" ><?php echo $row['INFOTITLE'];?></p></a>
+                                    <a href="schoolInfo.php"><p style="color:white;font-size:18px;" >查看更多...</p></a>
                                 </div>
                             </div>
                         </div>
@@ -117,15 +117,16 @@
                             <div class="col-12">
                                 <!-- Post Content -->
                                 <div id="nav">
-                                    <h2 style="color:white;" >相關資訊</h2>
+                                    <h2 style="color:white;" >最新系統公告</h2>
                                     <br>
                                     <?php
-                                    $sql = "SELECT * FROM information WHERE infoID = (SELECT MAX(infoID) FROM information)";
+                                    $link = mysqli_connect('localhost', 'root', '12345678', 'lazyguide');
+                                    $sql = "SELECT * FROM info WHERE INFOID = (SELECT MAX(INFO) FROM info WHERE INFOTYPE = 'system')";
                                     $result = mysqli_query($link, $sql);
                                     $row = mysqli_fetch_assoc($result);
                                     ?>
-                                    <a href="infoDetail.php?infoID=<?php echo $row['infoID']?>"><p style="color:white;font-size:18px;" ><?php echo $row['title'];?></p></a>
-                                    <a href="info.php"><p style="color:white;font-size:18px;" >查看更多...</p></a>
+                                    <a href="infoDetail.php?infoID=<?php echo $row['INFOID']?>&type=system"><p style="color:white;font-size:18px;" ><?php echo $row['INFOTITLE'];?></p></a>
+                                    <a href="systemInfo.php"><p style="color:white;font-size:18px;" >查看更多...</p></a>
 
                                 </div>
                             </div>
