@@ -126,8 +126,7 @@ $type = $_GET['type'];
             if($type == "indoor"){
                 $sql = "select * from indoor_activity where IDR_ACTID = '$actID'";
             }else{
-                $sql = "select * from outdoor_activity odr OUTER JOIN place p on  
-                                            odr.PLACEID = p.PLACEID where ODR_ACTID = '$actID'";
+                $sql = "select * from outdoor_activity odr LEFT JOIN place p on odr.PLACEID = p.PLACEID where ODR_ACTID = $actID";
             }
             $result = mysqli_query($link, $sql);
 
