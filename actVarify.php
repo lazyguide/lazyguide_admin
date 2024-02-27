@@ -28,7 +28,6 @@ if($type == "indoor"){
         $result = mysqli_query($link, $sql2);
         if($result){
         ?>
-        // 跳转到 indoor.php
         location.href = "indoor.php";
         <?php
         }else{
@@ -39,7 +38,6 @@ if($type == "indoor"){
         $result = mysqli_query($link, $sql2);
         if($result){
         ?>
-        // 跳转到 outdoor.php
         location.href = "outdoor.php";
         <?php
         }else{
