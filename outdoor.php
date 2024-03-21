@@ -167,13 +167,13 @@ $result = mysqli_query($link, $sql);
                             </u>
                         </td>
                         <?php
-                        if($row["ISVARIFIED"] == 0 and $current < $row["ODR_ACT_STARTDATE"]){
+                        if($row["ISVERIFIED"] == 0 and $current < $row["ODR_ACT_STARTDATE"]){
                             echo '<td>未審核</td>';
-                        }elseif ($row["ISVARIFIED"] == 1 and $current < $row["ODR_ACT_STARTDATE"]){
+                        }elseif ($row["ISVERIFIED"] == 1 and $current < $row["ODR_ACT_STARTDATE"]){
                             echo '<td>已審核通過</td>';
-                        }elseif ($row["ISVARIFIED"] == 1 and $current >= $row["ODR_ACT_STARTDATE"] and $current <= $row["IDR_ACT_ENDDATE"]){
+                        }elseif ($row["ISVERIFIED"] == 1 and $current >= $row["ODR_ACT_STARTDATE"] and $current <= $row["IDR_ACT_ENDDATE"]){
                             echo '<td>活動進行中</td>';
-                        }elseif ($row["ISVARIFIED"] == 0 and $current >= $row["ODR_ACT_STARTDATE"]){
+                        }elseif ($row["ISVERIFIED"] == 0 and $current >= $row["ODR_ACT_STARTDATE"]){
                             echo '<td>逾期未審核</td>';
                         }else{
                             echo '<td>活動已完成</td>';

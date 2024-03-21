@@ -173,7 +173,7 @@ $current = $date->format('Y-m-d H:i:s');
 
                             <div style="text-align: center;">
                                 <?php
-                                if($row['ISVARIFIED'] == 0 and $start > $current ){?>
+                                if($row['ISVERIFIED'] == 0 and $start > $current ){?>
                                     <a href="actVarify.php?actID=<?php echo $actID; ?>&type=<?php echo $type; ?>"
                                         style="float: right; width: 70px;height: 20px; border-radius: 4px;background-color: #70c745; color: white; border-color:#DDDDDD ;">審核通過</a>
 <?php }
