@@ -167,16 +167,18 @@ $result = mysqli_query($link, $sql);
                             </u>
                         </td>
                         <?php
-                        if($row["ISVERIFIED"] == 0 and $current < $row["ODR_ACT_STARTDATE"]){
-                            echo '<td>未審核</td>';
-                        }elseif ($row["ISVERIFIED"] == 1 and $current < $row["ODR_ACT_STARTDATE"]){
-                            echo '<td>已審核通過</td>';
-                        }elseif ($row["ISVERIFIED"] == 1 and $current >= $row["ODR_ACT_STARTDATE"] and $current <= $row["IDR_ACT_ENDDATE"]){
+                        if($row["VCODEVERIFY"] == 0 and $current < $row["ODR_ACT_STARTDATE"]){
+                            echo '<td>未進行身分驗證</td>';
+                        }elseif ($row["VCODEVERIFY"] == 1 and $row['ADMINVERIFY'] == 0 and $current < $row["ODR_ACT_STARTDATE"]){
+                            echo '<td>未進行管理員審核</td>';
+                        }elseif ($row["VCODEVERIFY"] == 1 and $row['ADMINVERIFY'] == 1 and $current >= $row["ODR_ACT_STARTDATE"] and $current < $row["ODR_ACT_ENDDATE"]){
                             echo '<td>活動進行中</td>';
-                        }elseif ($row["ISVERIFIED"] == 0 and $current >= $row["ODR_ACT_STARTDATE"]){
-                            echo '<td>逾期未審核</td>';
-                        }else{
+                        }elseif ($row["VCODEVERIFY"] == 1 and $row['ADMINVERIFY'] == 1 and $current < $row["ODR_ACT_STARTDATE"]){
+                            echo '<td>已完成審核</td>';
+                        }elseif($row["VCODEVERIFY"] == 1 and $row['ADMINVERIFY'] == 1 and $current >= $row["ODR_ACT_ENDDATE"]){
                             echo '<td>活動已完成</td>';
+                        }else{
+                            echo '<td>逾期未審核通過</td>';
                         }
                         ?>
                         <td><?php echo $row["ODR_ACT_STARTDATE"]." ~ ". $row["ODR_ACT_ENDDATE"]; ?></td>
