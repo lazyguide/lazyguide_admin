@@ -19,7 +19,7 @@ if($_SESSION['level'] == 'admin'){
                                             <li><a href="outdoor.php">室外活動審核</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="logout.php"><font style="color:#70c745;">Hi&nbsp&nbsp <?php echo $_SESSION['name']."  登出"?></font></a></li>
+                                    <li><a href="logout.php"><font style="color:#e5ba63;">Hi&nbsp&nbsp <?php echo $_SESSION['name']."  登出"?></font></a></li>
                                 </ul>
 </div>
 <?php
