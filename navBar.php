@@ -30,7 +30,7 @@ if($_SESSION['level'] == 'admin'){
                                            <li></li>
                                            <li></li>
                                            <li></li>
-                                           <li><a href="login.php"><font style="color:#70c745;">管理員登入</font></a></li>
+                                           <li><a href="login.php"><font style="color:#e5ba63;">管理員登入</font></a></li>
                                       </ul>
                                 </div>
                                 <?php
