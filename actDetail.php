@@ -17,10 +17,10 @@ $current = $date->format('Y-m-d H:i:s');
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title -->
-    <title>Carbon</title>
+    <title>LazyGuide</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="img/core-img/favicon.ico">
+    <link rel="icon" href="img/core-img/flag.png">
 
     <!-- Core Stylesheet -->
     <link rel="stylesheet" href="style.css">
@@ -43,7 +43,7 @@ $current = $date->format('Y-m-d H:i:s');
 <div class="preloader d-flex align-items-center justify-content-center">
     <div class="preloader-circle"></div>
     <div class="preloader-img">
-        <img src="img/core-img/leaf.png" alt="">
+        <img src="img/core-img/flag.png" alt="">
     </div>
 </div>
 
@@ -60,7 +60,7 @@ $current = $date->format('Y-m-d H:i:s');
                 <nav class="classy-navbar justify-content-between" id="alazeaNav">
 
                     <!-- Nav Brand -->
-                    <a href="home.php" class="nav-brand"><img src="img/core-img/logo.png" alt=""></a>
+                    <a href="home.php" class="nav-brand"></a>
 
                     <!-- Navbar Toggler -->
                     <div class="classy-navbar-toggler">
@@ -175,12 +175,12 @@ $current = $date->format('Y-m-d H:i:s');
                                 <?php
                                 if($row['VCODEVERIFY'] == 1 and $row['ADMINVERIFY'] == 0 and $start > $current ){?>
                                     <a href="actVerify.php?actID=<?php echo $actID; ?>&type=<?php echo $type; ?>"
-                                        style="float: right; width: 70px;height: 20px; border-radius: 4px;background-color: #70c745; color: white; border-color:#DDDDDD ;">審核通過</a>
+                                        style="float: right; width: 70px;height: 20px; border-radius: 4px;background-color: #E9D9B7; color: white; border-color:#DDDDDD ;">審核通過</a>
 <?php }
                                 ?>
 
                                 <a href="actDelete.php?actID=<?php echo $actID; ?>&type=<?php echo $type; ?>"
-                                   style="float: left; width: 70px;height: 20px; border-radius: 4px;background-color: #70c745; color: white; border-color:#DDDDDD ;">刪除活動</a>
+                                   style="float: left; width: 70px;height: 20px; border-radius: 4px;background-color: #E9D9B7; color: white; border-color:#DDDDDD ;">刪除活動</a>
 
 
                             </div>
