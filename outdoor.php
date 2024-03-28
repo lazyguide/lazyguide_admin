@@ -9,10 +9,10 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title -->
-    <title>carbon</title>
+    <title>LazyGuide</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="img/core-img/favicon.ico">
+    <link rel="icon" href="img/core-img/flag.png">
 
     <!-- Core Stylesheet -->
     <link rel="stylesheet" href="style.css">
@@ -43,7 +43,7 @@ $result = mysqli_query($link, $sql);
 <div class="preloader d-flex align-items-center justify-content-center">
     <div class="preloader-circle"></div>
     <div class="preloader-img">
-        <img src="img/core-img/leaf.png" alt="">
+        <img src="img/core-img/flag.png" alt="">
     </div>
 </div>
 
@@ -60,7 +60,7 @@ $result = mysqli_query($link, $sql);
                 <nav class="classy-navbar justify-content-between" id="alazeaNav">
 
                     <!-- Nav Brand -->
-                    <a href="index.html" class="nav-brand"><img src="img/core-img/logo.png" alt=""></a>
+                    <a href="index.html" class="nav-brand"></a>
 
                     <!-- Navbar Toggler -->
                     <div class="classy-navbar-toggler">
@@ -99,8 +99,8 @@ $result = mysqli_query($link, $sql);
 <!-- ##### Breadcrumb Area Start ##### -->
 <div class="breadcrumb-area">
     <!-- Top Breadcrumb Area -->
-    <div class="top-breadcrumb-area bg-img bg-overlay d-flex align-items-center justify-content-center" style="background-image: url(img/bg-img/24.jpg);">
-        <h2>最新環保資訊</h2>
+    <div class="top-breadcrumb-area bg-img bg-overlay d-flex align-items-center justify-content-center" style="background-image: url(img/bg-img/newmessagebg.jpg);">
+        <h2>室外活動資訊審核</h2>
     </div>
 
     <div class="container">
@@ -109,7 +109,7 @@ $result = mysqli_query($link, $sql);
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#"><i class="fa fa-home"></i> 首頁</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">最新環保資訊</li>
+                        <li class="breadcrumb-item active" aria-current="page">室外活動資訊審核</li>
                     </ol>
                 </nav>
             </div>
