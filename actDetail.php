@@ -176,14 +176,22 @@ $current = $date->format('Y-m-d H:i:s');
                                 if($row['VCODEVERIFY'] == 1 and $row['ADMINVERIFY'] == 0 and $start > $current ){?>
                                     <a href="actVerify.php?actID=<?php echo $actID; ?>&type=<?php echo $type; ?>"
                                         style="float: right; width: 70px;height: 20px; border-radius: 4px;background-color: #E9D9B7; color: white; border-color:#DDDDDD ;">審核通過</a>
+                                    
 <?php }
                                 ?>
-
                                 <a href="actDelete.php?actID=<?php echo $actID; ?>&type=<?php echo $type; ?>"
                                    style="float: left; width: 70px;height: 20px; border-radius: 4px;background-color: #E9D9B7; color: white; border-color:#DDDDDD ;">刪除活動</a>
+                                   <div class="section-heading">
+                        <form method="get" action="upInfo_b.php" style="font-size: 10px;float: left"><br><br>
+                        <p align="left">
+                            訊息框：<br>
+                            <textarea name="content" required style="width:450px;height:100px;"></textarea><br><br>
+                            <input type="submit" value="發送訊息"
+                            style="font-size: 14px; float: left; width: 70px;height: 20px; border-radius: 4px;background-color: #E9D9B7; color: white; border-color:#DDDDDD ;">
+                        </form>
 
+                    </div>
 
-                            </div>
 
 
                         </div>
