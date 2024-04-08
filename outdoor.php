@@ -51,7 +51,6 @@ $result = mysqli_query($link, $sql);
 <header class="header-area">
 
 
-
     <!-- ***** Navbar Area ***** -->
     <div class="alazea-main-menu">
         <div class="classy-nav-container breakpoint-off">
