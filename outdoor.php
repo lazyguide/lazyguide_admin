@@ -160,7 +160,7 @@ $result = mysqli_query($link, $sql);
                 <?php while ($row = mysqli_fetch_assoc($result)) { ?>
                     <tr>
                         <th scope="row"><?php echo $row["ODR_ACTID"]; ?></th>
-                        <td><u><a href="actDetail.php?actID=<?php echo $row['ODR_ACTID']?>&type=school">
+                        <td><u><a href="actDetail.php?actID=<?php echo $row['ODR_ACTID']?>&type=outdoor">
                                     <?php echo $row["ODR_ACTNAME"]; ?>
                                 </a>
                             </u>
