@@ -92,7 +92,7 @@ $type = $_GET['type'];
             <!-- Single Hero Post -->
             <div class="single-hero-post bg-overlay">
                 <!-- Post Image -->
-                <div class="slide-img bg-img" style="background-image: url(img/bg-img/1.jpg);"></div>
+                <div class="slide-img bg-img" style="background-image: url(img/bg-img/100.jpg);"></div>
 
 
 
