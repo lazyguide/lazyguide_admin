@@ -19,13 +19,14 @@ $row = mysqli_fetch_assoc($result);
   <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
   <!-- Title -->
-  <title>Alazea - Gardening &amp; Landscaping HTML Template</title>
+  <title>LazyGuide</title>
 
   <!-- Favicon -->
-  <link rel="icon" href="img/core-img/favicon.ico">
+  <link rel="icon" href="img/core-img/flag.png">
 
   <!-- Core Stylesheet -->
   <link rel="stylesheet" href="style.css">
+
 
 </head>
 
@@ -34,7 +35,7 @@ $row = mysqli_fetch_assoc($result);
   <div class="preloader d-flex align-items-center justify-content-center">
     <div class="preloader-circle"></div>
     <div class="preloader-img">
-      <img src="img/core-img/leaf.png" alt="">
+      <img src="img/core-img/flag.png" alt="">
     </div>
   </div>
 
@@ -52,7 +53,7 @@ $row = mysqli_fetch_assoc($result);
           <nav class="classy-navbar justify-content-between" id="alazeaNav">
 
             <!-- Nav Brand -->
-            <a href="index.php" class="nav-brand"><img src="img/core-img/logo.png" alt=""></a>
+            <a href="index.php" class="nav-brand"></a>
 
             <!-- Navbar Toggler -->
             <div class="classy-navbar-toggler">
@@ -97,7 +98,7 @@ $row = mysqli_fetch_assoc($result);
   <div class="breadcrumb-area">
     <!-- Top Breadcrumb Area -->
     <div class="top-breadcrumb-area bg-img bg-overlay d-flex align-items-center justify-content-center"
-      style="background-image: url(img/bg-img/24.jpg);">
+      style="background-image: url(img/bg-img/newmessagebg.jpg);">
       <h2>權限與資料管理</h2>
     </div>
     <style>
@@ -161,13 +162,14 @@ $row = mysqli_fetch_assoc($result);
         </div>
 
         <!-- All Products Area -->
-        <div class="col-12 col-md-8 col-lg-9">
-          <div class="shop-products-area">
-
-            <div class="row">
-              <div class="table-responsive">
-                <table class="table table-hover">
-                  <thead>
+<table BORDER WIDTH=35%>
+  <section class="bg-white py-10">
+    <div class="container px-10 my-10">
+        <div class="row gx-5 justify-content-center">
+            <!-- Pricing card free-->
+            <table class="table table-hover" background="">
+                <thead>
+                  
                     <tr>
                       <th>姓名</th>
                       <th>電話</th>
@@ -190,15 +192,15 @@ $row = mysqli_fetch_assoc($result);
                         </td>
 
                         <td class="text-success">
-                          <?php echo $row["LEVEL"]; ?><i class="mdi mdi-arrow-down"></i>
+                            <span style="color:#BCAF96;"><?php echo $row["LEVEL"]; ?><i class="mdi mdi-arrow-down"></span></i>
                         </td>
                         <td>
-                            <a href="level_b.php?userID=<?php echo $row['USERID']?>&level=admin" style="float: center; width: 1000px;height: 20px; border-radius: 4px;background-color: #70c745; color: white; border-color:#DDDDDD ;">&nbspadmin</a>
-                            <a href="level_b.php?userID=<?php echo $row['USERID']?>&level=user" style="float: center; width: 100px;height: 20px; border-radius: 4px;background-color: #70c745; color: white; border-color:#DDDDDD ;">&nbspuser</a>
+                            <a href="level_b.php?userID=<?php echo $row['USERID']?>&level=admin" style="float: center; width: 1000px;height: 20px; border-radius: 4px;background-color: #E9D9B7; color: white; border-color:#DDDDDD ;">&nbspadmin</a>
+                            <a href="level_b.php?userID=<?php echo $row['USERID']?>&level=user" style="float: center; width: 100px;height: 20px; border-radius: 4px;background-color: #E9D9B7; color: white; border-color:#DDDDDD ;">&nbspuser</a>
                             <?php
                             if($row['LEVEL'] == "user"){
                             ?>
-                            <a href="delete.php?userID=<?php echo $row['USERID']?>" style="float: center; width: 100px;height: 20px; border-radius: 4px;background-color: #70c745; color: white; border-color:#DDDDDD ;">&nbspdelete</a>
+                            <a href="delete.php?userID=<?php echo $row['USERID']?>" style="float: center; width: 100px;height: 20px; border-radius: 4px;background-color: #E9D9B7; color: white; border-color:#DDDDDD ;">&nbspdelete</a>
                             <?php
                             }
                             ?>
@@ -212,6 +214,7 @@ $row = mysqli_fetch_assoc($result);
 
                   </tbody>
                 </table>
+              </section>
               </div>
             </div>
           </div>
@@ -233,6 +236,7 @@ $row = mysqli_fetch_assoc($result);
     </div>
     </div>
   </section>
+ </table> 
   <!-- ##### Shop Area End ##### -->
 
 
