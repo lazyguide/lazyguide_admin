@@ -183,6 +183,8 @@ $current = $date->format('Y-m-d H:i:s');
                                    style="float: left; width: 70px;height: 20px; border-radius: 4px;background-color: #E9D9B7; color: white; border-color:#DDDDDD ;">刪除活動</a>
                                    <div class="section-heading">
                             <form method="get" action="sendMessage.php" style="font-size: 10px;float: left"><br><br>
+                                <input name="actID" type="hidden" value=<?php echo $actID;?>>
+                                <input name="type" type="hidden" value="<?php echo $type;?>">
                             <p align="left">
                                 訊息框：<br>
                                 <textarea name="content" required style="width:450px;height:100px;"><?php echo $row['MESSAGE'];?></textarea><br><br>
