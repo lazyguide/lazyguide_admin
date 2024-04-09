@@ -156,7 +156,7 @@ $result = mysqli_query($link, $sql);
                     <th scope="col">#</th>
                     <th scope="col">活動名稱</th>
                     <th scope="col">狀態</th>
-                    <th scope="col">活動期間</th>>
+                    <th scope="col">活動期間</th>
                 </tr>
                 </thead>
                 <tbody>
