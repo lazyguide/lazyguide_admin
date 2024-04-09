@@ -64,13 +64,13 @@
         $('#bar1').barfiller({
             tooltip: true,
             duration: 1000,
-            barColor: '#70c745',
+            barColor: '#e9d9b7',
             animateOnResize: true
         });
         $('#bar2').barfiller({
             tooltip: true,
             duration: 1000,
-            barColor: '#70c745',
+            barColor: '#e9d9b7',
             animateOnResize: true
         });
         $('#bar3').barfiller({

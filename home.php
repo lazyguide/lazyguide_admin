@@ -9,10 +9,10 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title -->
-    <title>Carbon</title>
+    <title>LazyGuide</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="img/core-img/favicon.ico">
+    <link rel="icon" href="img/core-img/flag.png">
 
     <!-- Core Stylesheet -->
     <link rel="stylesheet" href="style.css">
@@ -24,7 +24,7 @@
     <div class="preloader d-flex align-items-center justify-content-center">
         <div class="preloader-circle"></div>
         <div class="preloader-img">
-            <img src="img/core-img/recycle.png" alt="">
+            <img src="img/core-img/flag1.png" alt="">
         </div>
     </div>
 
@@ -38,7 +38,7 @@
                     <nav class="classy-navbar justify-content-between" id="alazeaNav">
 
                         <!-- Nav Brand -->
-                        <a href="home.php class="nav-brand"><img src="img/core-img/logo.png" alt=""></a>
+                        <a href="home.php class="nav-brand"></a>
 
                         <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">
@@ -73,18 +73,7 @@
         </div>
     </header>
     <!-- ##### Header Area End ##### -->
-    <style>
-        #nav {
-        position: absolute;
-        top: 110px;  right: 100px;  bottom: 50px; left: 100px; z-index: 0;
 
-         }
-         #van {
-        position: absolute;
-        top: 110px;  right: 100px;  bottom: 50px; left: 750px;
-
-         }
-    </style>
     <!-- ##### Hero Area Start ##### -->
         <section class="hero-area">
             <div>
@@ -92,46 +81,8 @@
                 <!-- Single Hero Post -->
                 <div class="single-hero-post bg-overlay">
                     <!-- Post Image -->
-                    <div class="slide-img bg-img" style="background-image: url(img/bg-img/1.jpg);"></div>
-                    <div id="nav" style="width:700px;">
-                        <div >
-                            <div class="col-12">
-                                <!-- Post Content -->
-                                <div id="nav">
-                                    <h2 style="color:white;" >最新校園公告</h2>
-                                    <br>
-                                    <?php
-                                        $link = mysqli_connect('localhost', 'root', '12345678', 'lazyguide');
-                                        $sql = "SELECT * FROM info WHERE INFOID = (SELECT MAX(INFOID) FROM info WHERE INFOTYPE = 'school')";
-                                        $result = mysqli_query($link, $sql);
-                                        $row = mysqli_fetch_assoc($result);
-                                    ?>
-                                    <a href="infoDetail.php?infoID=<?php echo $row['INFOID']?>&type=school"><p style="color:white;font-size:18px;" ><?php echo $row['INFOTITLE'];?></p></a>
-                                    <a href="schoolInfo.php"><p style="color:white;font-size:18px;" >查看更多...</p></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="van" style="width:700px;">
-                        <div >
-                            <div class="col-12">
-                                <!-- Post Content -->
-                                <div id="nav">
-                                    <h2 style="color:white;" >最新系統公告</h2>
-                                    <br>
-                                    <?php
-                                    $link = mysqli_connect('localhost', 'root', '12345678', 'lazyguide');
-                                    $sql = "SELECT * FROM info WHERE INFOID = (SELECT MAX(INFOID) FROM info WHERE INFOTYPE = 'system')";
-                                    $result = mysqli_query($link, $sql);
-                                    $row = mysqli_fetch_assoc($result);
-                                    ?>
-                                    <a href="infoDetail.php?infoID=<?php echo $row['INFOID']?>&type=system"><p style="color:white;font-size:18px;" ><?php echo $row['INFOTITLE'];?></p></a>
-                                    <a href="systemInfo.php"><p style="color:white;font-size:18px;" >查看更多...</p></a>
+                    <div class="slide-img bg-img" style="background-image: url(img/bg-img/100.jpg);"></div>
 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
