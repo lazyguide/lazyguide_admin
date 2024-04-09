@@ -13,10 +13,10 @@ $type = $_GET['type'];
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title -->
-    <title>carbon</title>
+    <title>LazyGuide</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="img/core-img/favicon.ico">
+    <link rel="icon" href="img/core-img/flag.png">
 
     <!-- Core Stylesheet -->
     <link rel="stylesheet" href="style.css">
@@ -28,7 +28,7 @@ $type = $_GET['type'];
     <div class="preloader d-flex align-items-center justify-content-center">
         <div class="preloader-circle"></div>
         <div class="preloader-img">
-            <img src="img/core-img/leaf.png" alt="">
+            <img src="img/core-img/flag.png" alt="">
         </div>
     </div>
 
@@ -42,7 +42,7 @@ $type = $_GET['type'];
                     <nav class="classy-navbar justify-content-between" id="alazeaNav">
 
                         <!-- Nav Brand -->
-                        <a href="index.html" class="nav-brand"><img src="img/core-img/logo.png" alt=""></a>
+                        <a href="index.html" class="nav-brand"></a>
 
                         <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">
@@ -83,7 +83,7 @@ $type = $_GET['type'];
     <div class="breadcrumb-area">
         <!-- Top Breadcrumb Area -->
         <div class="top-breadcrumb-area bg-img bg-overlay d-flex align-items-center justify-content-center"
-            style="background-image: url(img/bg-img/24.jpg);">
+            style="background-image: url(img/bg-img/newmessagebg.jpg);">
             <h2></h2>
         </div>
 
@@ -93,7 +93,7 @@ $type = $_GET['type'];
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="#"><i class="fa fa-home"></i>首頁</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">最新環保資訊發佈</li>
+                            <li class="breadcrumb-item active" aria-current="page">訊息修改</li>
                         </ol>
                     </nav>
                 </div>
@@ -109,7 +109,7 @@ $type = $_GET['type'];
                 <!-- Contact Thumbnail -->
                 <div class="col-12 col-md-6">
 
-                    <img src="img/bg-img/25.jpg" alt="">
+                    <img src="img/bg-img/adminbg.jpg" alt="">
 
                 </div>
                 <?php
@@ -143,7 +143,7 @@ $type = $_GET['type'];
 
 
                             <input type="submit" value="修改"
-                                style="width: 70px;height: 40px; border-radius: 4px;background-color: #70c745; color: white; border-color:#DDDDDD ;">
+                                style="width: 70px;height: 40px; border-radius: 4px;background-color: #E9D9B7; color: white; border-color:#DDDDDD ;">
                         </form>
 
                     </div>
