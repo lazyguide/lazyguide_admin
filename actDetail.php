@@ -185,7 +185,7 @@ $current = $date->format('Y-m-d H:i:s');
                             <form method="get" action="sendMessage.php" style="font-size: 10px;float: left"><br><br>
                             <p align="left">
                                 訊息框：<br>
-                                <textarea name="content" required style="width:450px;height:100px;" value="<?php echo $row['MESSAGE'];?>"></textarea><br><br>
+                                <textarea name="content" required style="width:450px;height:100px;"><?php echo $row['MESSAGE'];?></textarea><br><br>
                                 <input type="submit" value="發送訊息"
                                 style="font-size: 14px; float: right; width: 70px;height: 20px; border-radius: 4px;background-color: #E9D9B7; color: white; border-color:#DDDDDD ;">
                             </form>
