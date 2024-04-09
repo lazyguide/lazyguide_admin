@@ -15,10 +15,10 @@ $type = $_GET['type'];
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title -->
-    <title>Carbon</title>
+    <title>LazyGuide</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="img/core-img/favicon.ico">
+    <link rel="icon" href="img/core-img/flag.png">
 
     <!-- Core Stylesheet -->
     <link rel="stylesheet" href="style.css">
@@ -41,7 +41,7 @@ $type = $_GET['type'];
     <div class="preloader d-flex align-items-center justify-content-center">
         <div class="preloader-circle"></div>
         <div class="preloader-img">
-            <img src="img/core-img/leaf.png" alt="">
+            <img src="img/core-img/flag.png" alt="">
         </div>
     </div>
 
@@ -58,7 +58,7 @@ $type = $_GET['type'];
                     <nav class="classy-navbar justify-content-between" id="alazeaNav">
 
                         <!-- Nav Brand -->
-                        <a href="home.php" class="nav-brand"><img src="img/core-img/logo.png" alt=""></a>
+                        <a href="home.php" class="nav-brand"></a>
 
                         <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">
@@ -129,7 +129,7 @@ $type = $_GET['type'];
 
                 ?>
 
-                <div class="container-scroller " style="width:700px;" id="table-wrapper">
+                <div class="container-scroller " style="width:900px;" id="table-wrapper">
                     <div class="container-fluid page-body-wrapper full-page-wrapper">
                         <div class="card w-300 h-200 ">
                             <div class="card-body px-5 py-5">
@@ -149,11 +149,11 @@ $type = $_GET['type'];
 
                                     <div style="text-align: center;">
                                         <a href="infoUpdate.php?infoID=<?php echo $infoID; ?>&type=<?php echo $type; ?>"
-                                            style="float: right; width: 70px;height: 20px; border-radius: 4px;background-color: #70c745; color: white; border-color:#DDDDDD ;">修改</a>
+                                            style="float: right; width: 70px;height: 20px; border-radius: 4px;background-color: #E9D9B7; color: white; border-color:#DDDDDD ;">修改</a>
 
 
                                         <a href="infoDelete.php?infoID=<?php echo $infoID; ?>&type=<?php echo $type; ?>"
-                                            style="float: left; width: 70px;height: 20px; border-radius: 4px;background-color: #70c745; color: white; border-color:#DDDDDD ;">刪除</a>
+                                            style="float: left; width: 70px;height: 20px; border-radius: 4px;background-color: #E9D9B7; color: white; border-color:#DDDDDD ;">刪除</a>
 
 
                                     </div>
