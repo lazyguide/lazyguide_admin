@@ -182,7 +182,7 @@ $current = $date->format('Y-m-d H:i:s');
                                 <a href="actDelete.php?actID=<?php echo $actID; ?>&type=<?php echo $type; ?>"
                                    style="float: left; width: 70px;height: 20px; border-radius: 4px;background-color: #E9D9B7; color: white; border-color:#DDDDDD ;">刪除活動</a>
                                    <div class="section-heading">
-                    <?php if(($row['VCODEVERIFY'] == 1 and $row['ADMINVERIFY'] == 1) or $start <= $current){?>
+                    <?php if(!(($row['VCODEVERIFY'] == 1 and $row['ADMINVERIFY'] == 1) or $start <= $current)){?>
                             <form method="get" action="sendMessage.php" style="font-size: 10px;float: left"><br><br>
                                 <input name="actID" type="hidden" value=<?php echo $actID;?>>
                                 <input name="type" type="hidden" value="<?php echo $type;?>">
