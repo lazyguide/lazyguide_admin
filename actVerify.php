@@ -15,7 +15,7 @@ if($type == "indoor"){
     $name = $row["ODR_ACTNAME"];
 }
         if ($type == "indoor") {
-            $sql2 = "UPDATE indoor_activity SET ADMINVERIFY = 1 WHERE IDR_ACTID = $actID";
+            $sql2 = "UPDATE indoor_activity SET ADMINVERIFY = 1, MESSAGE = NULL WHERE IDR_ACTID = $actID";
             $result = mysqli_query($link, $sql2);
             if ($result) {
                 ?>
@@ -27,7 +27,7 @@ if($type == "indoor"){
                 echo "error";
             }
         }else {
-            $sql2 = "UPDATE outdoor_activity SET ADMINVERIFY = 1 WHERE ODR_ACTID = $actID";
+            $sql2 = "UPDATE outdoor_activity SET ADMINVERIFY = 1, MESSAGE = NULL WHERE ODR_ACTID = $actID";
             $result = mysqli_query($link, $sql2);
             if ($result) {
                 ?>
